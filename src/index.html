@@ -17,9 +17,9 @@
                     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                 </defs>
                 <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(12,81,239,0.5)" />
                     <use xlink:href="#gentle-wave" x="48" y="0" fill="#153f9f" />
                     <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(10,51,146,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(12,81,239,0.5)" />
                     <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(64,122,255,0.7)" />
                 </g>
             </svg>
@@ -27,7 +27,81 @@
         <!--End waves-->
     </div>
     <body style="background-color: #3169ed;">
+        <style>
+            .body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              background-color: #f0f0f0;
+            }
         
+            .slider-container {
+              width: 80%;
+              overflow: hidden;
+              position: relative;
+            }
+        
+            .slider {
+              display: flex;
+              gap: 10px;
+            }
+        
+            .slider-item {
+              flex: 0 0 15%; /* Chaque item occupe 20% de la largeur */
+              background-color: #00d0ff;
+              color: white;
+              text-align: center;
+              border-radius: 10px;
+              padding: 20px;
+              cursor: pointer;
+              transition: transform 0.3s ease;
+            }
+        
+            .slider-item:hover {
+              transform: scale(1.1);
+              background-color: #00ffff;
+            }
+        
+          </style>
+          <body>
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slider-item" data-url="https://example.com/page1">
+                  tête
+                </div>
+                <div class="slider-item" data-url="https://example.com/page2">
+                  coup
+                </div>
+                <div class="slider-item" data-url="https://example.com/page3">
+                  torse
+                </div>
+                <div class="slider-item" data-url="https://example.com/page4">
+                  bras
+                </div>
+                <div class="slider-item" data-url="https://example.com/page5">
+                  jambe
+                </div>
+              </div>
+            </div>
+          
+            <script>
+              // Récupère tous les membres du slider
+              const sliderItems = document.querySelectorAll('.slider-item');
+          
+              sliderItems.forEach(item => {
+                item.addEventListener('click', () => {
+                  const url = item.getAttribute('data-url');
+                  if (url) {
+                    window.open(url, '_blank'); // Ouvre la page dans un nouvel onglet
+                  }
+                });
+              });
+            </script>
+          </body>
         <br>
         <br>
         <br>
