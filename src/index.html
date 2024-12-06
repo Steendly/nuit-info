@@ -51,23 +51,23 @@
             }
         
             .slider-container {
-              width: 80%;
+              width: 100%;
               overflow: hidden;
               position: relative;
             }
         
             .slider {
               display: flex;
-              gap: 10px;
+              gap: 30px;
             }
         
             .slider-item {
-              flex: 0 0 15%; /* Chaque item occupe 20% de la largeur */
+              flex: 0 0 20%; /* Chaque item occupe 20% de la largeur */
               background-color: #00d0ff;
               color: white;
               text-align: center;
-              border-radius: 10px;
-              padding: 20px;
+              border-radius: 15px;
+              padding: 30px;
               cursor: pointer;
               transition: transform 0.3s ease;
             }
@@ -80,12 +80,9 @@
           </style>
           <body>
             <div class="slider-container">
-              <div class="slider">
+              <div class="slider" style="font-size: 30px">
                 <div class="slider-item" data-url="https://example.com/page1">
                   tête
-                </div>
-                <div class="slider-item" data-url="https://example.com/page2">
-                  coup
                 </div>
                 <div class="slider-item" data-url="https://example.com/page3">
                   torse
